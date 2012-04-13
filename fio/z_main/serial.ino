@@ -1,10 +1,12 @@
 #include <SoftwareSerial.h>
-#include "constants.h"
+#include "serial.h"
+#include "protocol.h"
 
 SoftwareSerial monitorSerial(MONITOR_RX_PORT, MONITOR_TX_PORT);
 int iIncomingByte = 0;
 int i = 0;
 int x, y, z = 0;
+
 void serialMonitorSetup()
 {
   monitorSerial.begin(MONITOR_BDRATE);  
@@ -24,26 +26,43 @@ void serialMonitor()
   if (bytesAvailable = Serial.available())
   {  
 //    monitorSerial.write(iIncomingByte);
-    iIncomingByte = Serial.read();
+
+	// check request
+    iIncomingByte = Serial.peek();
 
     switch (iIncomingByte)
     {
       case 'P':
-        
-        for (i=1; i<bytesAvailable; i++)
+	  
+		// do not process request until all parameters are received
+		if (bytesAvailable < P_NUM_ARGS+1)
+			break;
+			
+		// process request
+		Serial.read();
+        for (i=0; i<P_NUM_ARGS; i++)
         {
           iIncomingByte = Serial.read();
           //motorDiagnostic(iIncomingByte);
           motorOutput(iIncomingByte);
         }
+		// respond
         Serial.print("P");          
         
         break;
       
       case 'M':
     
+		// do not process request until all parameters are received
+		if (bytesAvailable < M_NUM_ARGS+1)
+			break;
+
+		// process request	
+		Serial.read();			
         readMagnetometer(&x, &y, &z);
         //magnetoDiagnostic(x, y, z);
+		
+		// respond
         Serial.write((uint8_t*) &x, sizeof(int));
         Serial.write((uint8_t*) &y, sizeof(int));
         Serial.write((uint8_t*) &z, sizeof(int));

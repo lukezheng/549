@@ -1,6 +1,6 @@
 
 #include <Wire.h>
-#include "constants.h"
+#include "i2c.h"
 
 void i2cSetup()
 {

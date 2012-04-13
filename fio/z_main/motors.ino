@@ -1,5 +1,4 @@
 
-#include "constants.h"
 #include "motor_constants.h"
 
 
@@ -7,7 +6,8 @@ int currentDirectionBits = 0;
 
 int motorOutput(int iIncomingByte)
 {
-  // updates only the current motor's new direction, preserving old directions of other motors
+  // updates only the current motor's new direction, 
+  // preserving old directions of other motors
   currentDirectionBits = 
         updateDirection(currentDirectionBits, 
                         GET_MOTOR_DIRECTION(iIncomingByte), 
