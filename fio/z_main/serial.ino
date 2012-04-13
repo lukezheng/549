@@ -3,7 +3,8 @@
 
 SoftwareSerial monitorSerial(MONITOR_RX_PORT, MONITOR_TX_PORT);
 int iIncomingByte = 0;
-int i=0;
+int i = 0;
+int x, y, z = 0;
 void serialMonitorSetup()
 {
   monitorSerial.begin(MONITOR_BDRATE);  
@@ -16,13 +17,61 @@ void serialWiFlySetup()
 
 void serialMonitor()
 {
+  int bytesAvailable = 0;
+  
   if (monitorSerial.available())
     Serial.write(monitorSerial.read());
-  if (Serial.available())
+  if (bytesAvailable = Serial.available())
   {  
+//    monitorSerial.write(iIncomingByte);
     iIncomingByte = Serial.read();
-    monitorSerial.write(iIncomingByte);
-/*
+
+    switch (iIncomingByte)
+    {
+      case 'P':
+        
+        for (i=1; i<bytesAvailable; i++)
+        {
+          iIncomingByte = Serial.read();
+          //motorDiagnostic(iIncomingByte);
+          motorOutput(iIncomingByte);
+        }
+        Serial.print("P");          
+        
+        break;
+      
+      case 'M':
+    
+        readMagnetometer(&x, &y, &z);
+        //magnetoDiagnostic(x, y, z);
+        Serial.write((uint8_t*) &x, sizeof(int));
+        Serial.write((uint8_t*) &y, sizeof(int));
+        Serial.write((uint8_t*) &z, sizeof(int));
+        
+        break;
+      
+      default:
+        break;  
+    }
+
+  }  
+
+  
+}
+
+void magnetoDiagnostic(int x, int y, int z)
+{
+  monitorSerial.print("X: ");
+  monitorSerial.print(x, DEC);
+  monitorSerial.print(" Y: ");
+  monitorSerial.print(y, DEC);
+  monitorSerial.print(" Z: ");
+  monitorSerial.print(z, DEC);
+  monitorSerial.println();  
+}
+
+void motorDiagnostic(int iIncomingByte)
+{
     monitorSerial.print("Motor: ");    
     switch (GET_MOTOR(iIncomingByte))
     {
@@ -51,10 +100,19 @@ void serialMonitor()
 
     monitorSerial.print(" Direction: ");
     if (GET_MOTOR_DIRECTION(iIncomingByte))
-      monitorSerial.print("CCW");  
+    {
+      if (GET_MOTOR(iIncomingByte) & 0x01)
+        monitorSerial.print("CCW ");
+      else
+        monitorSerial.print("CW ");  
+    }
     else
-      monitorSerial.print("CW ");
-      
+    {
+      if (GET_MOTOR(iIncomingByte) & 0x01)
+        monitorSerial.print("CW ");
+      else
+        monitorSerial.print("CCW ");
+    } 
 //    monitorSerial.print(GET_MOTOR_DIRECTION(iIncomingByte), DEC);
 
     monitorSerial.print(" Speed: ");
@@ -64,8 +122,5 @@ void serialMonitor()
 
 //    monitorSerial.print(iIncomingByte, HEX);
 //    monitorSerial.print("\r\n");
-*/
-    motorOutput(iIncomingByte);
-  }  
   
 }

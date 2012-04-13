@@ -30,5 +30,6 @@
 #define FRONT_RIGHT_MOTOR  OUT_B2_PWM_PIN
 
 #define GET_MOTOR(x)           ((x & 0xC0) >> 6)
-#define GET_MOTOR_DIRECTION(x) ((x & 0x20) >> 5)  // 1 is CCW, 0 CW
+//#define GET_MOTOR_DIRECTION(x) ((x & 0x20) >> 5)
+#define GET_MOTOR_DIRECTION(x) ((GET_MOTOR(x) & 0x01) ? ((x & 0x20) >> 5) : (~((x & 0x20) >> 5)) & 0x01)  // 1 is CCW, 0 CW (reversed for V and FL)
 #define GET_MOTOR_VAL(x)       ((x & 0x1F) << 3) 

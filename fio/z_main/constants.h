@@ -2,10 +2,11 @@
 #define MONITOR_RX_PORT 2
 #define MONITOR_TX_PORT 3
 #define MONITOR_BDRATE 57600
-#define WIFLY_BDRATE 115200
+#define WIFLY_BDRATE   57600
 
 // I2C, pin 4 == SDA, pin 5 == SCL
 #define IO_EXPANDER_ADDR ((0x7 << 3) | 0x7) // 0111 A2 A1 A0 (pin 3 pin 2 pin 1)
+#define MAGNETOMETER_ADDR 0x1E // 00011110
 
 // UDP
 #define LOCAL_PORT   9999
