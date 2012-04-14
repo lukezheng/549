@@ -25,14 +25,23 @@ void serialMonitor()
     Serial.write(monitorSerial.read());
   if (bytesAvailable = Serial.available())
   {  
-//    monitorSerial.write(iIncomingByte);
+//    monitorSerial.write(Serial.read());
+	processRequest(bytesAvailable);
+  }  
 
+  
+}
+
+void processRequest(int bytesAvailable)
+{
 	// check request
     iIncomingByte = Serial.peek();
 
     switch (iIncomingByte)
     {
       case 'P':
+	  
+//		monitorSerial.println("In 'P'.");
 	  
 		// do not process request until all parameters are received
 		if (bytesAvailable < P_NUM_ARGS+1)
@@ -43,7 +52,7 @@ void serialMonitor()
         for (i=0; i<P_NUM_ARGS; i++)
         {
           iIncomingByte = Serial.read();
-          //motorDiagnostic(iIncomingByte);
+          motorDiagnostic(iIncomingByte);
           motorOutput(iIncomingByte);
         }
 		// respond
@@ -52,7 +61,9 @@ void serialMonitor()
         break;
       
       case 'M':
-    
+		
+//		monitorSerial.println("In 'M'.");
+	
 		// do not process request until all parameters are received
 		if (bytesAvailable < M_NUM_ARGS+1)
 			break;
@@ -60,7 +71,7 @@ void serialMonitor()
 		// process request	
 		Serial.read();			
         readMagnetometer(&x, &y, &z);
-        //magnetoDiagnostic(x, y, z);
+        magnetoDiagnostic(x, y, z);
 		
 		// respond
         Serial.write((uint8_t*) &x, sizeof(int));
@@ -70,12 +81,9 @@ void serialMonitor()
         break;
       
       default:
+//		monitorSerial.println("In Default.");
         break;  
     }
-
-  }  
-
-  
 }
 
 void magnetoDiagnostic(int x, int y, int z)

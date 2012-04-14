@@ -1,5 +1,5 @@
 
-#include "motor_constants.h"
+#include "motor.h"
 
 
 int currentDirectionBits = 0;
