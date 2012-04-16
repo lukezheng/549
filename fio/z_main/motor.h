@@ -29,6 +29,11 @@
 #define FRONT_LEFT_MOTOR   OUT_A2_PWM_PIN
 #define FRONT_RIGHT_MOTOR  OUT_B2_PWM_PIN
 
+// xx 		x 			xxxxx
+// ^^ 		^ 			^^^^^
+// ||		|			|||||
+// motor	direction	velocity
+
 #define GET_MOTOR(x)           ((x & 0xC0) >> 6)
 //#define GET_MOTOR_DIRECTION(x) ((x & 0x20) >> 5)
 #define GET_MOTOR_DIRECTION(x) ((GET_MOTOR(x) & 0x01) ? ((x & 0x20) >> 5) : (~((x & 0x20) >> 5)) & 0x01)  

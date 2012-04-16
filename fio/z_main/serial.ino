@@ -56,7 +56,7 @@ void processRequest(int bytesAvailable)
           motorOutput(iIncomingByte);
         }
 		// respond
-        Serial.print("P");          
+        Serial.print("P"); 
         
         break;
       
@@ -77,7 +77,7 @@ void processRequest(int bytesAvailable)
         Serial.write((uint8_t*) &x, sizeof(int));
         Serial.write((uint8_t*) &y, sizeof(int));
         Serial.write((uint8_t*) &z, sizeof(int));
-        
+		
         break;
       
       default:
