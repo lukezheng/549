@@ -9,7 +9,9 @@ int x, y, z = 0;
 
 void serialMonitorSetup()
 {
-  monitorSerial.begin(MONITOR_BDRATE);  
+	monitorSerial.begin(MONITOR_BDRATE);
+	pinMode(DEBUG_PIN, INPUT);
+	digitalWrite(DEBUG_PIN, HIGH);
 }
 
 void serialWiFlySetup()
@@ -24,9 +26,11 @@ void serialMonitor()
   if (monitorSerial.available())
     Serial.write(monitorSerial.read());
   if (bytesAvailable = Serial.available())
-  {  
-//    monitorSerial.write(Serial.read());
-	processRequest(bytesAvailable);
+  {
+	if (digitalRead(DEBUG_PIN) == LOW)
+		monitorSerial.write(Serial.read());
+	else
+		processRequest(bytesAvailable);
   }  
 
   
