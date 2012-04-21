@@ -1,0 +1,19 @@
+<NotepadPlus>
+    <Session activeView="1">
+        <mainView activeIndex="5">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="576" startPos="462" endPos="462" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\motor.h" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="168" startPos="0" endPos="0" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\protocol.h" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="224" startPos="136" endPos="136" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\serial.h" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="288" startPos="0" endPos="0" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\tcp.h" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="352" startPos="0" endPos="0" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\i2c.h" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="704" startPos="0" endPos="0" selMode="0" lang="Normal Text" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\wifly.txt" />
+        </mainView>
+        <subView activeIndex="4">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="384" startPos="171" endPos="171" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\i2c.ino" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="560" startPos="0" endPos="0" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\magnetometer.ino" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="536" startPos="0" endPos="0" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\motors.ino" />
+            <File firstVisibleLine="65" xOffset="0" scrollWidth="560" startPos="630" endPos="630" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\serial.ino" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="200" startPos="80" endPos="80" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\z_main.ino" />
+        </subView>
+    </Session>
+</NotepadPlus>

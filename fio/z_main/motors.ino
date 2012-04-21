@@ -4,6 +4,19 @@
 
 int currentDirectionBits = 0;
 
+void motorDirectionUpdate(float pidValue)
+{
+	unsigned velocity = (unsigned int) MOTOR_MAX_VELOCITY*abs(pidValue);
+	unsigned leftDirection = (pidValue < 0.0) ? CW: CCW;
+	unsigned rightDirection = (pidValue < 0.0) ? CCW: CW;
+	
+	uint8_t leftMotorVal = (FRONT_LEFT << 6) | (leftDirection << 5) | (velocity);
+	uint8_t rightMotorVal = (FRONT_RIGHT << 6) | (rightDirection << 5) | (velocity);
+	
+	motorOutput(leftMotorVal);
+	motorOutput(rightMotorVal);
+}
+
 int motorOutput(int iIncomingByte)
 {
   // updates only the current motor's new direction, 

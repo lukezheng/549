@@ -29,6 +29,10 @@
 #define FRONT_LEFT_MOTOR   OUT_A2_PWM_PIN
 #define FRONT_RIGHT_MOTOR  OUT_B2_PWM_PIN
 
+#define MOTOR_MAX_VELOCITY 0x1F
+#define CW	0
+#define CCW	1
+
 // xx 		x 			xxxxx
 // ^^ 		^ 			^^^^^
 // ||		|			|||||
