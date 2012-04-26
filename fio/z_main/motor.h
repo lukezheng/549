@@ -43,3 +43,15 @@
 #define GET_MOTOR_DIRECTION(x) ((GET_MOTOR(x) & 0x01) ? ((x & 0x20) >> 5) : (~((x & 0x20) >> 5)) & 0x01)  
 // 1 is CCW, 0 CW (reversed for V and FL)
 #define GET_MOTOR_VAL(x)       ((x & 0x1F) << 3) 
+
+
+
+int currentDirectionBits = 0;
+float minForwardThrustHeadingError = 0.0;
+float forwardThrust = 0.0;
+float forwardDecayPerSec = 0.0;
+float verticalThrust = 0.0;
+float verticalDecayPerSec = 0.0;
+float sideThrust = 0.0;
+float sideDecayPerSec = 0.0;
+unsigned long lastDecay = 0;

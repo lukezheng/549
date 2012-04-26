@@ -1,7 +1,5 @@
 #include "magnetometer.h"
 
-int magneto[3];
-float currentDirection;
 
 void readMagnetometer(int* x, int* y, int* z)
 {
@@ -25,12 +23,10 @@ void readMagnetometer(int* x, int* y, int* z)
 
 void toAngle(int x, int y)
 {
-	if (y > 0)
-		currentDirection = 90 - tan(x/y)*180/PI;
-	else if (y < 0)
-		currentDirection = 270 - tan(x/y)*180/PI;
+	if (y != 0)
+		currentDirection = atan2((y+Y_OFFSET)*Y_SCALE, (x+X_OFFSET)*X_SCALE);
 	else if (x < 0)
-		currentDirection = 180.0;
+		currentDirection = PI;
 	else
 		currentDirection = 0.0;
 }

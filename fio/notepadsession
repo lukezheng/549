@@ -1,19 +1,25 @@
 <NotepadPlus>
     <Session activeView="1">
-        <mainView activeIndex="5">
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="576" startPos="462" endPos="462" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\motor.h" />
+        <mainView activeIndex="6">
+            <File firstVisibleLine="19" xOffset="0" scrollWidth="848" startPos="1415" endPos="1415" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\motor.h" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="168" startPos="0" endPos="0" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\protocol.h" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="224" startPos="136" endPos="136" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\serial.h" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="504" startPos="236" endPos="236" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\serial.h" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="288" startPos="0" endPos="0" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\tcp.h" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="352" startPos="0" endPos="0" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\i2c.h" />
             <File firstVisibleLine="0" xOffset="0" scrollWidth="704" startPos="0" endPos="0" selMode="0" lang="Normal Text" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\wifly.txt" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="208" startPos="143" endPos="143" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\pid.h" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="248" startPos="216" endPos="216" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\magnetometer.h" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="368" startPos="470" endPos="470" selMode="0" lang="Normal Text" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\protocol.txt" />
         </mainView>
-        <subView activeIndex="4">
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="384" startPos="171" endPos="171" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\i2c.ino" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="560" startPos="0" endPos="0" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\magnetometer.ino" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="536" startPos="0" endPos="0" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\motors.ino" />
-            <File firstVisibleLine="65" xOffset="0" scrollWidth="560" startPos="630" endPos="630" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\serial.ino" />
-            <File firstVisibleLine="0" xOffset="0" scrollWidth="200" startPos="80" endPos="80" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\z_main.ino" />
+        <subView activeIndex="7">
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="655" startPos="149" endPos="149" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\z_main.ino" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="384" startPos="0" endPos="0" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\i2c.ino" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="592" startPos="26" endPos="26" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\magnetometer.ino" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="728" startPos="0" endPos="0" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\motors.ino" />
+            <File firstVisibleLine="26" xOffset="0" scrollWidth="728" startPos="1884" endPos="1884" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\serial.ino" />
+            <File firstVisibleLine="2" xOffset="0" scrollWidth="656" startPos="0" endPos="0" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\pid.ino" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="432" startPos="8" endPos="13" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\utility.ino" />
+            <File firstVisibleLine="0" xOffset="0" scrollWidth="728" startPos="301" endPos="301" selMode="0" lang="C++" encoding="-1" filename="C:\Users\Luke\Dropbox\18-549 Capstone\549\fio\z_main\control.ino" />
         </subView>
     </Session>
 </NotepadPlus>

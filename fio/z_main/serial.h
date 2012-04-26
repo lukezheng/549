@@ -5,3 +5,8 @@
 #define WIFLY_BDRATE   57600
 
 
+SoftwareSerial monitorSerial(MONITOR_RX_PORT, MONITOR_TX_PORT);
+int iIncomingByte = 0;
+int i = 0;
+
+
